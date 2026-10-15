@@ -9,64 +9,59 @@ namespace TransportSystemsArrays
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-            // --- ЗАВДАННЯ 1 ---
-            Console.WriteLine("=== Завдання 1: Максимальна кількість повторень 1-ці ===");
+            Console.WriteLine("1: кількість повторень 1-ці ");
             {
                 int[] nums = { 1, 1, 0, 1, 1, 1 };
-                Console.WriteLine($"Приклад 1: nums = [{string.Join(", ", nums)}] -> Output: {FindMaxConsecutiveOnes(nums)}");
+                Console.WriteLine($"1: nums = [{string.Join(", ", nums)}] -> Output: {FindMaxConsecutiveOnes(nums)}");
             }
             {
                 int[] nums = { 1, 0, 1, 1, 0, 1 };
-                Console.WriteLine($"Приклад 2: nums = [{string.Join(", ", nums)}] -> Output: {FindMaxConsecutiveOnes(nums)}\n");
+                Console.WriteLine($"2: nums = [{string.Join(", ", nums)}] -> Output: {FindMaxConsecutiveOnes(nums)}\n");
             }
 
-            // --- ЗАВДАННЯ 2 ---
-            Console.WriteLine("=== Завдання 2: Числа з парною кількістю цифр ===");
+            Console.WriteLine("2: числа з парною кількістю цифр");
             {
                 int[] nums = { 12, 345, 2, 6, 7896 };
-                Console.WriteLine($"Приклад 1: nums = [{string.Join(", ", nums)}] -> Output: {FindNumbers(nums)}");
+                Console.WriteLine($"1: nums = [{string.Join(", ", nums)}] -> Output: {FindNumbers(nums)}");
             }
             {
                 int[] nums = { 555, 901, 482, 1771 };
-                Console.WriteLine($"Приклад 2: nums = [{string.Join(", ", nums)}] -> Output: {FindNumbers(nums)}\n");
+                Console.WriteLine($"2: nums = [{string.Join(", ", nums)}] -> Output: {FindNumbers(nums)}\n");
             }
 
-            // --- ЗАВДАННЯ 3 ---
-            Console.WriteLine("=== Завдання 3: Квадрати відсортованого масиву ===");
+            Console.WriteLine("3: квадрати відсортованого масиву");
             {
                 int[] nums = { -4, -1, 0, 3, 10 };
                 int[] result = SortedSquares(nums);
-                Console.WriteLine($"Приклад 1: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
+                Console.WriteLine($"1: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
             }
             {
                 int[] nums = { -7, -3, 2, 3, 11 };
                 int[] result = SortedSquares(nums);
-                Console.WriteLine($"Приклад 2: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]\n");
+                Console.WriteLine($"2: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]\n");
             }
 
-            // --- ЗАВДАННЯ 4 ---
-            Console.WriteLine("=== Завдання 4: Подвійні нулі ===");
+            Console.WriteLine("4: Подвійні нулі");
             {
                 int[] arr = { 1, 0, 2, 3, 0, 4, 5, 0 };
-                Console.Write($"Приклад 1: arr = [{string.Join(", ", arr)}] -> ");
+                Console.Write($"1: arr = [{string.Join(", ", arr)}] -> ");
                 DuplicateZeros(arr);
                 Console.WriteLine($"Output: [{string.Join(", ", arr)}]");
             }
             {
                 int[] arr = { 1, 2, 3 };
-                Console.Write($"Приклад 2: arr = [{string.Join(", ", arr)}] -> ");
+                Console.Write($"2: arr = [{string.Join(", ", arr)}] -> ");
                 DuplicateZeros(arr);
                 Console.WriteLine($"Output: [{string.Join(", ", arr)}]\n");
             }
 
-            Console.WriteLine("=== Завдання 5: Об'єднати відсортований масив ===");
+            Console.WriteLine("5: Об'єднати відсортований масив");
             {
                 int[] nums1 = { 1, 2, 3, 0, 0, 0 };
                 int m = 3;
                 int[] nums2 = { 2, 5, 6 };
                 int n = 3;
-                Console.Write($"Приклад 1: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
+                Console.Write($"1: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
                 Merge(nums1, m, nums2, n);
                 Console.WriteLine($"Output: [{string.Join(", ", nums1)}]");
             }
@@ -75,7 +70,7 @@ namespace TransportSystemsArrays
                 int m = 1;
                 int[] nums2 = Array.Empty<int>();
                 int n = 0;
-                Console.Write($"Приклад 2: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
+                Console.Write($"2: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
                 Merge(nums1, m, nums2, n);
                 Console.WriteLine($"Output: [{string.Join(", ", nums1)}]");
             }
@@ -84,87 +79,78 @@ namespace TransportSystemsArrays
                 int m = 0;
                 int[] nums2 = { 1 };
                 int n = 1;
-                Console.Write($"Приклад 3: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
+                Console.Write($"3: nums1 = [{string.Join(", ", nums1)}], m = {m}, nums2 = [{string.Join(", ", nums2)}], n = {n} -> ");
                 Merge(nums1, m, nums2, n);
                 Console.WriteLine($"Output: [{string.Join(", ", nums1)}]\n");
             }
 
-            // --- ЗАВДАННЯ 6 ---
-            Console.WriteLine("=== Завдання 6: Видалити дублікати з відсортованого масиву ===");
+            Console.WriteLine("6: видалити дублікати з відсортованого масиву");
             {
                 int[] nums = { 1, 1, 2 };
-                Console.Write($"Приклад 1: nums = [{string.Join(", ", nums)}] -> ");
+                Console.Write($"1: nums = [{string.Join(", ", nums)}] -> ");
                 int k = RemoveDuplicates(nums);
                 string formattedNums = string.Join(", ", nums.Take(k).Select(x => x.ToString()).Concat(Enumerable.Repeat("_", nums.Length - k)));
                 Console.WriteLine($"Output: {k}, nums = [{formattedNums}]");
             }
             {
                 int[] nums = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-                Console.Write($"Приклад 2: nums = [{string.Join(", ", nums)}] -> ");
+                Console.Write($"2: nums = [{string.Join(", ", nums)}] -> ");
                 int k = RemoveDuplicates(nums);
                 string formattedNums = string.Join(", ", nums.Take(k).Select(x => x.ToString()).Concat(Enumerable.Repeat("_", nums.Length - k)));
                 Console.WriteLine($"Output: {k}, nums = [{formattedNums}]\n");
             }
 
-            // --- ЗАВДАННЯ 7 ---
-            Console.WriteLine("=== Завдання 7: Перевірте, чи існують N і його подвійник ===");
+            Console.WriteLine("7: перевірте, чи існують N і його подвійник");
             {
                 int[] arr = { 10, 2, 5, 3 };
-                Console.WriteLine($"Приклад 1: arr = [{string.Join(", ", arr)}] -> Output: {CheckIfExist(arr).ToString().ToLower()}");
+                Console.WriteLine($"1: arr = [{string.Join(", ", arr)}] -> Output: {CheckIfExist(arr).ToString().ToLower()}");
             }
             {
                 int[] arr = { 3, 1, 7, 11 };
-                Console.WriteLine($"Приклад 2: arr = [{string.Join(", ", arr)}] -> Output: {CheckIfExist(arr).ToString().ToLower()}\n");
+                Console.WriteLine($"2: arr = [{string.Join(", ", arr)}] -> Output: {CheckIfExist(arr).ToString().ToLower()}\n");
             }
 
-            // --- ЗАВДАННЯ 8 ---
-            Console.WriteLine("=== Завдання 8: Дійсний гірський масив ===");
+            Console.WriteLine("8: дійсний гірський масив");
             {
                 int[] arr = { 2, 1 };
-                Console.WriteLine($"Приклад 1: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}");
+                Console.WriteLine($"1: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}");
             }
             {
                 int[] arr = { 3, 5, 5 };
-                Console.WriteLine($"Приклад 2: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}");
+                Console.WriteLine($"2: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}");
             }
             {
                 int[] arr = { 0, 3, 2, 1 };
-                Console.WriteLine($"Приклад 3: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}\n");
+                Console.WriteLine($"3: arr = [{string.Join(", ", arr)}] -> Output: {ValidMountainArray(arr).ToString().ToLower()}\n");
             }
 
-            // --- ЗАВДАННЯ 9 ---
-            Console.WriteLine("=== Завдання 9: Замініть елементи на найбільший елемент справа ===");
+            Console.WriteLine("9: замініть елементи на найбільший елемент справа");
             {
                 int[] arr = { 17, 18, 5, 4, 6, 1 };
-                Console.Write($"Приклад 1: arr = [{string.Join(", ", arr)}] -> ");
+                Console.Write($"1: arr = [{string.Join(", ", arr)}] -> ");
                 int[] result = ReplaceElements(arr);
                 Console.WriteLine($"Output: [{string.Join(", ", result)}]");
             }
             {
                 int[] arr = { 400 };
-                Console.Write($"Приклад 2: arr = [{string.Join(", ", arr)}] -> ");
+                Console.Write($"2: arr = [{string.Join(", ", arr)}] -> ");
                 int[] result = ReplaceElements(arr);
                 Console.WriteLine($"Output: [{string.Join(", ", result)}]\n");
             }
 
-            // --- ЗАВДАННЯ 10 ---
-            Console.WriteLine("=== Завдання 10: Відсортувати масив за парністю ===");
+            Console.WriteLine("10: відсортувати масив за парністю");
             {
                 int[] nums = { 3, 1, 2, 4 };
                 int[] result = SortArrayByParity(nums);
-                Console.WriteLine($"Приклад 1: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
+                Console.WriteLine($"1: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
             }
             {
                 int[] nums = { 0 };
                 int[] result = SortArrayByParity(nums);
-                Console.WriteLine($"Приклад 2: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
+                Console.WriteLine($"2: nums = [{string.Join(", ", nums)}] -> Output: [{string.Join(", ", result)}]");
             }
         }
 
-        // ---------------------------------------------------------
-        // 1. Максимальна кількість повторень 1-ці
-        // Обмеження: 1 <= nums.Length <= 100 000; nums[i] можуть бути 0 чи 1
-        // ---------------------------------------------------------
         public static int FindMaxConsecutiveOnes(int[] nums)
         {
             if (nums == null || nums.Length < 1 || nums.Length > 100_000)
@@ -192,10 +178,6 @@ namespace TransportSystemsArrays
             return maxCount;
         }
 
-        // ---------------------------------------------------------
-        // 2. Знайдіть числа з парною кількістю цифр
-        // Обмеження: 1 <= nums.Length <= 500; 1 <= nums[i] <= 100 000
-        // ---------------------------------------------------------
         public static int FindNumbers(int[] nums)
         {
             if (nums == null || nums.Length < 1 || nums.Length > 500)
@@ -213,10 +195,6 @@ namespace TransportSystemsArrays
             return count;
         }
 
-        // ---------------------------------------------------------
-        // 3. Квадрати відсортованого масиву
-        // Обмеження: 1 <= nums.Length <= 10 000; -10 000 <= nums[i] <= 10 000; nums відсортований за неспаданням
-        // ---------------------------------------------------------
         public static int[] SortedSquares(int[] nums)
         {
             if (nums == null || nums.Length < 1 || nums.Length > 10_000)
@@ -234,10 +212,6 @@ namespace TransportSystemsArrays
             return nums.Select(x => x * x).OrderBy(x => x).ToArray();
         }
 
-        // ---------------------------------------------------------
-        // 4. Подвійні нулі
-        // Обмеження: 1 <= arr.Length <= 10 000; 0 <= arr[i] <= 9
-        // ---------------------------------------------------------
         public static void DuplicateZeros(int[] arr)
         {
             if (arr == null || arr.Length < 1 || arr.Length > 10_000)
@@ -263,10 +237,6 @@ namespace TransportSystemsArrays
             }
         }
 
-        // ---------------------------------------------------------
-        // 5. Об'єднати відсортований масив
-        // Обмеження: nums1.Length == m + n; nums2.Length == n; 0 <= m, n <= 200; 1 <= m + n <= 200; -10 <= nums1[i], nums2[j] <= 10
-        // ---------------------------------------------------------
         public static void Merge(int[] nums1, int m, int[] nums2, int n)
         {
             if (nums1 == null || nums2 == null)
@@ -290,11 +260,6 @@ namespace TransportSystemsArrays
             Array.Copy(nums2, 0, nums1, m, n);
             Array.Sort(nums1);
         }
-
-        // ---------------------------------------------------------
-        // 6. Видалити дублікати з відсортованого масиву
-        // Обмеження: 1 <= nums.Length <= 30 000; -100 <= nums[i] <= 100; nums відсортовані за неспаданням
-        // ---------------------------------------------------------
         public static int RemoveDuplicates(int[] nums)
         {
             if (nums == null || nums.Length < 1 || nums.Length > 30_000)
@@ -320,10 +285,6 @@ namespace TransportSystemsArrays
             return k;
         }
 
-        // ---------------------------------------------------------
-        // 7. Перевірте, чи існують N і його подвійник
-        // Обмеження: 2 <= arr.Length <= 500; -1 000 <= arr[i] <= 1 000
-        // ---------------------------------------------------------
         public static bool CheckIfExist(int[] arr)
         {
             if (arr == null || arr.Length < 2 || arr.Length > 500)
@@ -343,10 +304,6 @@ namespace TransportSystemsArrays
             return false;
         }
 
-        // ---------------------------------------------------------
-        // 8. Дійсний гірський масив
-        // Обмеження: 1 <= arr.Length <= 10 000; 0 <= arr[i] <= 10 000
-        // ---------------------------------------------------------
         public static bool ValidMountainArray(int[] arr)
         {
             if (arr == null || arr.Length < 1 || arr.Length > 10_000)
@@ -374,10 +331,6 @@ namespace TransportSystemsArrays
             return i == n - 1;
         }
 
-        // ---------------------------------------------------------
-        // 9. Замініть елементи на найбільший елемент з правого боку
-        // Обмеження: 1 <= arr.Length <= 10 000; 1 <= arr[i] <= 100 000
-        // ---------------------------------------------------------
         public static int[] ReplaceElements(int[] arr)
         {
             if (arr == null || arr.Length < 1 || arr.Length > 10_000)
@@ -400,10 +353,6 @@ namespace TransportSystemsArrays
             return arr;
         }
 
-        // ---------------------------------------------------------
-        // 10. Відсортувати масив за парністю
-        // Обмеження: 1 <= nums.Length <= 5000; 0 <= nums[i] <= 5000
-        // ---------------------------------------------------------
         public static int[] SortArrayByParity(int[] nums)
         {
             if (nums == null || nums.Length < 1 || nums.Length > 5000)
